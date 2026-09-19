@@ -1,10 +1,272 @@
-/* DETWAL SIGNALS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030303;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 74px;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 100;
+
+    background: rgba(3, 3, 3, 0.82);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.logo-mark {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #09a8ff,
+        #9b24ff
+    );
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+nav a,
+.login {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+nav a:hover,
+.login:hover {
+    color: #ffffff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.gradient-btn {
+    border: none;
+    outline: none;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        110deg,
+        #08a8ff 0%,
+        #385cff 48%,
+        #b600ff 100%
+    );
+
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+
+    transition: 0.25s ease;
+}
+
+.gradient-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 35px rgba(60,80,255,0.30);
+}
+
+.big {
+    padding: 16px 31px;
+    font-size: 16px;
+}
+
+.outline-btn {
+    padding: 15px 28px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    background: rgba(255,255,255,0.035);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.outline-btn:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.28);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    padding: 95px 20px 120px;
+
+    background:
+        radial-gradient(
+            circle at 50% 55%,
+            rgba(25,80,180,0.09),
+            transparent 40%
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 950px;
+
+    position: relative;
+    z-index: 20;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 9px 17px;
+
+    border-radius: 100px;
+
+    border: 1px solid rgba(255,255,255,0.13);
+
+    background: rgba(255,255,255,0.025);
+
+    color: #a5a5a5;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(58px, 7vw, 100px);
+
+    line-height: 0.96;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+}
+
+h1 span {
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #cfcfcf 45%,
+        #858585 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 30px auto 0;
+
+    color: #9b9b9b;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   STATS
+========================= */
 
 .stats {
     display: flex;
     justify-content: center;
-    gap: 55px;
-    margin: 35px 0 10px;
+    align-items: center;
+
+    gap: 70px;
+
+    margin: 35px 0 28px;
 }
 
 .stats div {
@@ -15,94 +277,344 @@
 
 .stats strong {
     font-size: 28px;
-}
+    font-weight: 800;
 
-.stats small {
-    color: #777;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-}
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #9d9d9d
+    );
 
-h1 span {
-    background: linear-gradient(90deg, #08a8ff, #b600ff);
     -webkit-background-clip: text;
     color: transparent;
 }
 
+.stats small {
+    color: #666;
 
-/* SIGNAL CARDS */
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.small-text {
+    margin-top: 20px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================
+   MARKET VISUAL
+========================= */
+
+.market-visual {
+    position: absolute;
+
+    width: 1200px;
+    height: 550px;
+
+    left: 50%;
+    bottom: -310px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    opacity: 0.95;
+}
+
+.glow {
+    position: absolute;
+
+    width: 700px;
+    height: 300px;
+
+    left: 50%;
+    top: 40px;
+
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        ellipse,
+        rgba(20,120,255,0.35),
+        transparent 70%
+    );
+
+    filter: blur(35px);
+}
+
+.earth {
+    position: absolute;
+
+    width: 1300px;
+    height: 470px;
+
+    left: 50%;
+    bottom: -280px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 15%,
+            #174d82 0%,
+            #0a1c32 38%,
+            #03070d 70%,
+            #010203 100%
+        );
+
+    border-top: 2px solid rgba(30,150,255,0.85);
+
+    box-shadow:
+        0 -25px 100px rgba(0,120,255,0.40),
+        inset 0 35px 90px rgba(0,80,180,0.25);
+}
+
+
+/* =========================
+   SIGNAL CARDS
+========================= */
 
 .signal-card {
     position: absolute;
-    z-index: 10;
 
     width: 210px;
-    padding: 18px;
+
+    padding: 17px 18px;
 
     display: flex;
     flex-direction: column;
+
     gap: 8px;
 
     text-align: left;
 
-    border: 1px solid rgba(80,170,255,0.25);
     border-radius: 14px;
 
-    background: rgba(8,12,20,0.82);
-    backdrop-filter: blur(15px);
+    border: 1px solid rgba(80,170,255,0.28);
 
-    box-shadow: 0 0 35px rgba(0,120,255,0.12);
+    background: rgba(7,11,18,0.82);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 0 35px rgba(0,120,255,0.12);
+
+    z-index: 10;
 }
 
 .signal-card b {
-    color: #aaa;
+    color: #999;
+
     font-size: 12px;
 }
 
 .signal-card strong {
+    color: white;
+
     font-size: 16px;
 }
 
 .signal-card span {
     color: #19d68b;
+
+    font-size: 13px;
+
     font-weight: 700;
 }
 
 .card-one {
-    top: 90px;
-    left: 100px;
+    left: 80px;
+    top: 80px;
 }
 
 .card-two {
-    top: 190px;
-    right: 60px;
+    right: 45px;
+    top: 175px;
 }
 
 .card-three {
-    top: 310px;
-    left: 260px;
+    left: 280px;
+    top: 300px;
 }
 
 
-/* MOBILE */
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 30px 120px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+    z-index: 20;
+}
+
+.feature {
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: #080808;
+
+    transition: 0.25s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(80,120,255,0.25);
+}
+
+.feature > span {
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.feature h3 {
+    margin: 18px 0 10px;
+
+    font-size: 20px;
+}
+
+.feature p {
+    color: #777;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
+    .navbar {
+        height: 68px;
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .login {
+        display: none;
+    }
+
+    .nav-right {
+        gap: 0;
+    }
+
+    .navbar .gradient-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 700px;
+        padding-top: 70px;
+    }
+
+    h1 {
+        font-size: clamp(48px, 13vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
     .stats {
-        gap: 20px;
+        gap: 25px;
     }
 
     .stats strong {
         font-size: 22px;
     }
 
+    .stats small {
+        font-size: 8px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .market-visual {
+        width: 900px;
+    }
+
     .signal-card {
         display: none;
     }
 
-    .card-one,
-    .card-two,
-    .card-three {
-        display: none;
+    .features {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-mark {
+        width: 31px;
+        height: 31px;
+    }
+
+    .stats {
+        gap: 18px;
+    }
+
+    .stats strong {
+        font-size: 19px;
+    }
+
+    .stats small {
+        letter-spacing: 0.7px;
     }
 }
